@@ -1,0 +1,22 @@
+const Discord = require(`discord.js`);
+const utf8 = require('utf8');
+
+const client = new Discord.Client();
+
+var prefix = `!`
+
+client.on(`message`, message => {
+    if(message.author === client.user) return;
+    if(message.content.startsWith(prefix + `ASA`)) {
+        message.channel.sendMessage(`List of commands: halva, kozinaki`);
+
+     }
+if(message.content.startsWith(`halva`)) {
+        message.channel.sendMessage(`o, xalva okazalas s araxisom vnutri. nezhdanchiki..`);
+     }
+if(message.content.startsWith(`kozinaki`)) {
+        message.channel.sendMessage(`kozinaki ochen kalorijnye, sytnye i vkusnye ^^`);
+     }
+});
+
+client.login(`NTYwNTc0NDIxNDU5NDAyNzUy.D34Ajw._eVWMT588xyOPSbs73_NXM4mnbc`);
